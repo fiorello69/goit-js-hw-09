@@ -4,7 +4,7 @@ function getRandomHexColor() {
     .padStart(6, '0')}`;
 }
 
-function getConicGradient() {
+function getRadialGradient() {
   const color1 = getRandomHexColor();
   const color2 = getRandomHexColor();
   const color3 = getRandomHexColor();
