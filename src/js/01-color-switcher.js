@@ -9,7 +9,8 @@ function getRadialGradient() {
   const color2 = getRandomHexColor();
   const color3 = getRandomHexColor();
 
-  return `radial-gradient( circle,${color1}, ${color2}, ${color3})`;
+  // Ajustează aceste valori după preferința ta
+  return `radial-gradient(circle, ${color1}, ${color2}, ${color3})`;
 }
 
 const startButton = document.querySelector('[data-start]');
@@ -25,8 +26,9 @@ function startGradientChange() {
   stopButton.disabled = false;
 
   intervalId = setInterval(() => {
-    document.body.style.background = getConicGradient();
-  }, 1000);
+    document.body.style.transition = 'background 1s ease-in-out'; // Ajustează aici durata și funcția de tranziție
+    document.body.style.background = getRadialGradient();
+  }, 2000);
 }
 
 function stopGradientChange() {
@@ -34,4 +36,5 @@ function stopGradientChange() {
   stopButton.disabled = true;
 
   clearInterval(intervalId);
+  document.body.style.transition = ''; // Elimină tranziția când se oprește schimbarea culorii
 }
