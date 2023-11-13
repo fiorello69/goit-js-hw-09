@@ -9,7 +9,6 @@ function getRadialGradient() {
   const color2 = getRandomHexColor();
   const color3 = getRandomHexColor();
 
-  // Ajustează aceste valori după preferința ta
   return `radial-gradient(circle, ${color1}, ${color2}, ${color3})`;
 }
 
