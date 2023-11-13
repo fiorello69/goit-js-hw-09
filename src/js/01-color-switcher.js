@@ -26,7 +26,7 @@ function startGradientChange() {
   stopButton.disabled = false;
 
   intervalId = setInterval(() => {
-    document.body.style.transition = 'background 1s ease-in-out'; // Ajustează aici durata și funcția de tranziție
+    document.body.style.transition = 'background 1s ease-in-out';
     document.body.style.background = getRadialGradient();
   }, 2000);
 }
@@ -36,5 +36,5 @@ function stopGradientChange() {
   stopButton.disabled = true;
 
   clearInterval(intervalId);
-  document.body.style.transition = ''; // Elimină tranziția când se oprește schimbarea culorii
+  document.body.style.transition = '';
 }
